@@ -1,5 +1,5 @@
 //
-//  SFVideoLayerView.h
+//  SFVideoToolView.h
 //  SFVideoCapture
 //
 //  Created by apple on 2018/1/17.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SFVideoToolView.h"
-@interface SFVideoLayerView : UIView
 
-@property (nonatomic, strong) SFVideoToolView *toolView;
+@interface SFVideoToolView : UIView
+@property (nonatomic, strong) UIButton *recordBtn; // 录制与停止按钮
 @end

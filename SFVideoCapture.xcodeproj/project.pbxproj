@@ -46,6 +46,8 @@
 		18EF36D0200F376100D4AF71 /* SFVideoLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36CF200F376100D4AF71 /* SFVideoLayerView.m */; };
 		18EF36D4200F392E00D4AF71 /* SFVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36D2200F392E00D4AF71 /* SFVideoViewController.m */; };
 		18EF36D5200F392E00D4AF71 /* SFVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EF36D3200F392E00D4AF71 /* SFVideoViewController.xib */; };
+		18EF36D8200F3E9800D4AF71 /* UIButton+SFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36D6200F3E9800D4AF71 /* UIButton+SFButton.m */; };
+		18EF36DB200F405B00D4AF71 /* SFVideoToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36DA200F405B00D4AF71 /* SFVideoToolView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +155,10 @@
 		18EF36D1200F392E00D4AF71 /* SFVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFVideoViewController.h; sourceTree = "<group>"; };
 		18EF36D2200F392E00D4AF71 /* SFVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFVideoViewController.m; sourceTree = "<group>"; };
 		18EF36D3200F392E00D4AF71 /* SFVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SFVideoViewController.xib; sourceTree = "<group>"; };
+		18EF36D6200F3E9800D4AF71 /* UIButton+SFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SFButton.m"; sourceTree = "<group>"; };
+		18EF36D7200F3E9800D4AF71 /* UIButton+SFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SFButton.h"; sourceTree = "<group>"; };
+		18EF36D9200F405B00D4AF71 /* SFVideoToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFVideoToolView.h; sourceTree = "<group>"; };
+		18EF36DA200F405B00D4AF71 /* SFVideoToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFVideoToolView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +286,8 @@
 			children = (
 				18EF36CE200F376100D4AF71 /* SFVideoLayerView.h */,
 				18EF36CF200F376100D4AF71 /* SFVideoLayerView.m */,
+				18EF36D9200F405B00D4AF71 /* SFVideoToolView.h */,
+				18EF36DA200F405B00D4AF71 /* SFVideoToolView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +295,8 @@
 		18EF3668200F13AA00D4AF71 /* SFTool */ = {
 			isa = PBXGroup;
 			children = (
+				18EF36D7200F3E9800D4AF71 /* UIButton+SFButton.h */,
+				18EF36D6200F3E9800D4AF71 /* UIButton+SFButton.m */,
 				18EF366A200F13CE00D4AF71 /* SFVideoManager.h */,
 				18EF366B200F13CE00D4AF71 /* SFVideoManager.m */,
 				18EF36C7200F2C2D00D4AF71 /* SFVideo.h */,
@@ -561,8 +571,10 @@
 				18EF36C1200F1A7100D4AF71 /* LGAlertViewTextField.m in Sources */,
 				18EF36BE200F1A7100D4AF71 /* LGAlertViewController.m in Sources */,
 				18EF3633200F11A300D4AF71 /* AppDelegate.m in Sources */,
+				18EF36DB200F405B00D4AF71 /* SFVideoToolView.m in Sources */,
 				18EF36BD200F1A7100D4AF71 /* LGAlertViewCell.m in Sources */,
 				18EF36C9200F2C2D00D4AF71 /* SFVideo.m in Sources */,
+				18EF36D8200F3E9800D4AF71 /* UIButton+SFButton.m in Sources */,
 				18EF368A200F172D00D4AF71 /* MASCompositeConstraint.m in Sources */,
 				18EF36BA200F1A7100D4AF71 /* LGAlertView.m in Sources */,
 				18EF36C3200F1A7100D4AF71 /* LGAlertViewWindowContainer.m in Sources */,

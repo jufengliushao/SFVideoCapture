@@ -9,13 +9,26 @@
 #import "SFVideoLayerView.h"
 
 @implementation SFVideoLayerView
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)init{
+    if (self = [super init]) {
+        [self addSubview:self.toolView];
+    }
+    return self;
 }
-*/
+
+- (void)drawRect:(CGRect)rect{
+    self.toolView.frame = CGRectMake(0, 0, rect.size.width, rect.size.height);
+    for (CALayer *layer in self.layer.sublayers) {
+        layer.frame = rect;
+    }
+    [super drawRect:rect];
+}
+
+- (SFVideoToolView *)toolView{
+    if (!_toolView) {
+        _toolView = [[SFVideoToolView alloc] init];
+    }
+    return _toolView;
+}
 
 @end

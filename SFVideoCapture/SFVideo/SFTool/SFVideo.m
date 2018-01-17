@@ -24,7 +24,9 @@
 @property (nonatomic, strong) AVCaptureDeviceInput *videoInput;
 @property (nonatomic, strong) AVCaptureDeviceInput *audioInput;
 @property (nonatomic, strong) AVCaptureMovieFileOutput  *movieFileOutput;
+@property (nonatomic, strong) AVCaptureAudioDataOutput *audioOutput;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *preViewLayer;
+@property (nonatomic, strong) AVCaptureVideoDataOutput *output;
 
 @end
 
@@ -47,8 +49,8 @@ static NSString *fileName = @"baoxiu.mp4";
     if (self = [super init]) {
         self.present = SFVideoPresentMedium; // 中等质量
         [self sf_private_setVideoPresent];
-        [[SFFileManager shareInstance] sf_createFile:fileName path: [[SFFileManager shareInstance] sf_getCachePath]];
-        videoPath = [fileName stringByAppendingPathComponent:[[SFFileManager shareInstance] sf_getCachePath]];
+        [[SFFileManager shareInstance] sf_createFile:fileName path: [[SFFileManager shareInstance] sf_getDocumentsPath]];
+        videoPath = [[[SFFileManager shareInstance] sf_getDocumentsPath] stringByAppendingPathComponent:fileName];
         NSLog(@"%@", videoPath);
     }
     return self;
@@ -56,7 +58,7 @@ static NSString *fileName = @"baoxiu.mp4";
 
 #pragma mark - 共有方法
 - (void)sf_startVideo{
-    [self.movieFileOutput startRecordingToOutputFileURL:[NSURL URLWithString:videoPath] recordingDelegate:self];
+    [self.movieFileOutput startRecordingToOutputFileURL:[NSURL fileURLWithPath:videoPath] recordingDelegate:self];
 }
 
 - (void)sf_stopVideo{
@@ -71,8 +73,13 @@ static NSString *fileName = @"baoxiu.mp4";
     self.preViewLayer = [AVCaptureVideoPreviewLayer layerWithSession:_captureSession];
     _preViewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     self.preViewLayer.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
-    [preView.layer insertSublayer:self.preViewLayer atIndex:0];
+    [preView.layer addSublayer:self.preViewLayer];
     return preView;
+}
+
+#pragma mark - AVCaptureFileOutputRecordingDelegate
+- (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error{
+    NSLog(@"");
 }
 
 #pragma mark - 私有方法
@@ -172,6 +179,10 @@ static NSString *fileName = @"baoxiu.mp4";
 
 - (void)sf_private_setOutPut{
     self.movieFileOutput = [[AVCaptureMovieFileOutput alloc] init];
+    AVCaptureConnection *captureConnection=[self.movieFileOutput connectionWithMediaType:AVMediaTypeVideo];
+    if ([captureConnection isVideoStabilizationSupported ]) {
+        captureConnection.preferredVideoStabilizationMode=AVCaptureVideoStabilizationModeAuto;
+    }
     if ([_captureSession canAddOutput:_movieFileOutput])
     {
         [_captureSession addOutput:_movieFileOutput];
