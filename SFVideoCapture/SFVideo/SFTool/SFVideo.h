@@ -19,7 +19,10 @@ typedef NS_ENUM(NSInteger, SFVideoPresent) {
 
 @property (nonatomic, assign) SFVideoPresent present; // 录像质量 默认中等质量
 
+// 开始录制视频
 - (void)sf_startVideo;
+// 停止录制视频
 - (void)sf_stopVideo;
+// 获取展示页面
 - (SFVideoLayerView *)sf_getVideoLayer;
 @end

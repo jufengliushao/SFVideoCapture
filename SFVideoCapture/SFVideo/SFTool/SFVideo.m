@@ -18,6 +18,7 @@
 
 @interface SFVideo()<AVCaptureFileOutputRecordingDelegate>{
     NSString *videoPath; // 视频路径
+    NSString *videoDecPath; // 视频压缩后的路径
 }
 
 @property (nonatomic, strong) AVCaptureSession *captureSession;
@@ -32,6 +33,7 @@
 
 static SFVideo *video = nil;
 static NSString *fileName = @"baoxiu.mp4";
+static NSString *fileDecName = @"baoxiuDec.mp4";
 
 @implementation SFVideo
 #pragma mark - 系统方法
@@ -47,11 +49,12 @@ static NSString *fileName = @"baoxiu.mp4";
 
 - (instancetype)init{
     if (self = [super init]) {
-        self.present = SFVideoPresentMedium; // 中等质量
+        self.present = SFVideoPresentHigh; // 中等质量
         [self sf_private_setVideoPresent];
         [[SFFileManager shareInstance] sf_createFile:fileName path: [[SFFileManager shareInstance] sf_getDocumentsPath]];
         videoPath = [[[SFFileManager shareInstance] sf_getDocumentsPath] stringByAppendingPathComponent:fileName];
-        NSLog(@"%@", videoPath);
+        [[SFFileManager shareInstance] sf_createFile:fileDecName path: [[SFFileManager shareInstance] sf_getDocumentsPath]];
+        videoDecPath = [[[SFFileManager shareInstance] sf_getDocumentsPath] stringByAppendingPathComponent:fileDecName];
     }
     return self;
 }
@@ -64,6 +67,11 @@ static NSString *fileName = @"baoxiu.mp4";
 - (void)sf_stopVideo{
     [self.movieFileOutput stopRecording];
     [self.captureSession stopRunning];
+    
+    dispatch_queue_t queue = dispatch_queue_create("com.liushaofeng", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        [self sf_private_videoDecode];
+    });
 }
 
 - (SFVideoLayerView *)sf_getVideoLayer{
@@ -189,6 +197,20 @@ static NSString *fileName = @"baoxiu.mp4";
     }
 }
 
+- (void)sf_private_videoDecode{
+    //加载视频资源
+    AVAsset *asset = [AVAsset assetWithURL:[NSURL fileURLWithPath:videoPath]];
+    //创建视频资源导出会话
+    AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPresetMediumQuality];
+    //创建导出视频的URL
+    session.outputURL = [NSURL fileURLWithPath:videoDecPath];
+    //必须配置输出属性
+    session.outputFileType = @"com.apple.quicktime-movie";
+    //导出视频
+    [session exportAsynchronouslyWithCompletionHandler:^{
+        
+    }];
+}
 #pragma mark - setter getter
 - (void)setPresent:(SFVideoPresent)present{
     _present = present;
