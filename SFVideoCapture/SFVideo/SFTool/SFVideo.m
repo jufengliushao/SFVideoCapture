@@ -187,6 +187,9 @@ static NSString *fileDecName = @"baoxiuDec.mp4";
 
 - (void)sf_private_setOutPut{
     self.movieFileOutput = [[AVCaptureMovieFileOutput alloc] init];
+    int64_t value = 10000;
+    int32_t preferredTimeScale = 300;
+    self.movieFileOutput.movieFragmentInterval = CMTimeMake(value, preferredTimeScale);
     AVCaptureConnection *captureConnection=[self.movieFileOutput connectionWithMediaType:AVMediaTypeVideo];
     if ([captureConnection isVideoStabilizationSupported ]) {
         captureConnection.preferredVideoStabilizationMode=AVCaptureVideoStabilizationModeAuto;
