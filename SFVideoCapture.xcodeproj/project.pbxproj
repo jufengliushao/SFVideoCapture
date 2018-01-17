@@ -1,0 +1,821 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18EF3633200F11A300D4AF71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3632200F11A300D4AF71 /* AppDelegate.m */; };
+		18EF3636200F11A300D4AF71 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3635200F11A300D4AF71 /* ViewController.m */; };
+		18EF3639200F11A300D4AF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF3637200F11A300D4AF71 /* Main.storyboard */; };
+		18EF363B200F11A300D4AF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EF363A200F11A300D4AF71 /* Assets.xcassets */; };
+		18EF363E200F11A300D4AF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF363C200F11A300D4AF71 /* LaunchScreen.storyboard */; };
+		18EF3641200F11A300D4AF71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3640200F11A300D4AF71 /* main.m */; };
+		18EF364B200F11A300D4AF71 /* SFVideoCaptureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF364A200F11A300D4AF71 /* SFVideoCaptureTests.m */; };
+		18EF3656200F11A300D4AF71 /* SFVideoCaptureUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3655200F11A300D4AF71 /* SFVideoCaptureUITests.m */; };
+		18EF366C200F13CE00D4AF71 /* SFVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF366B200F13CE00D4AF71 /* SFVideoManager.m */; };
+		18EF368A200F172D00D4AF71 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF366F200F172D00D4AF71 /* MASCompositeConstraint.m */; };
+		18EF368B200F172D00D4AF71 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3672200F172D00D4AF71 /* MASConstraint.m */; };
+		18EF368C200F172D00D4AF71 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3674200F172D00D4AF71 /* MASConstraintMaker.m */; };
+		18EF368D200F172D00D4AF71 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3676200F172D00D4AF71 /* MASLayoutConstraint.m */; };
+		18EF368E200F172D00D4AF71 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF367A200F172D00D4AF71 /* MASViewAttribute.m */; };
+		18EF368F200F172D00D4AF71 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF367C200F172D00D4AF71 /* MASViewConstraint.m */; };
+		18EF3690200F172D00D4AF71 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF367E200F172D00D4AF71 /* NSArray+MASAdditions.m */; };
+		18EF3691200F172D00D4AF71 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3681200F172D00D4AF71 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		18EF3692200F172D00D4AF71 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3683200F172D00D4AF71 /* View+MASAdditions.m */; };
+		18EF3693200F172D00D4AF71 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3686200F172D00D4AF71 /* ViewController+MASAdditions.m */; };
+		18EF3694200F172D00D4AF71 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3689200F172D00D4AF71 /* MBProgressHUD.m */; };
+		18EF3698200F176100D4AF71 /* SFGetTopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF3697200F176100D4AF71 /* SFGetTopVC.m */; };
+		18EF369F200F194300D4AF71 /* UIView+SFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF369E200F194300D4AF71 /* UIView+SFView.m */; };
+		18EF36BA200F1A7100D4AF71 /* LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36A2200F1A7100D4AF71 /* LGAlertView.m */; };
+		18EF36BB200F1A7100D4AF71 /* LGAlertViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36A4200F1A7100D4AF71 /* LGAlertViewButton.m */; };
+		18EF36BC200F1A7100D4AF71 /* LGAlertViewButtonProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36A6200F1A7100D4AF71 /* LGAlertViewButtonProperties.m */; };
+		18EF36BD200F1A7100D4AF71 /* LGAlertViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36A8200F1A7100D4AF71 /* LGAlertViewCell.m */; };
+		18EF36BE200F1A7100D4AF71 /* LGAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36AA200F1A7100D4AF71 /* LGAlertViewController.m */; };
+		18EF36BF200F1A7100D4AF71 /* LGAlertViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36AC200F1A7100D4AF71 /* LGAlertViewHelper.m */; };
+		18EF36C0200F1A7100D4AF71 /* LGAlertViewShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36AE200F1A7100D4AF71 /* LGAlertViewShadowView.m */; };
+		18EF36C1200F1A7100D4AF71 /* LGAlertViewTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36B1200F1A7100D4AF71 /* LGAlertViewTextField.m */; };
+		18EF36C2200F1A7100D4AF71 /* LGAlertViewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36B3200F1A7100D4AF71 /* LGAlertViewWindow.m */; };
+		18EF36C3200F1A7100D4AF71 /* LGAlertViewWindowContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36B5200F1A7100D4AF71 /* LGAlertViewWindowContainer.m */; };
+		18EF36C4200F1A7100D4AF71 /* LGAlertViewWindowsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36B7200F1A7100D4AF71 /* LGAlertViewWindowsObserver.m */; };
+		18EF36C5200F1A7100D4AF71 /* UIWindow+LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF36B9200F1A7100D4AF71 /* UIWindow+LGAlertView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18EF3647200F11A300D4AF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18EF3626200F11A300D4AF71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18EF362D200F11A300D4AF71;
+			remoteInfo = SFVideoCapture;
+		};
+		18EF3652200F11A300D4AF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18EF3626200F11A300D4AF71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18EF362D200F11A300D4AF71;
+			remoteInfo = SFVideoCapture;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18EF362E200F11A300D4AF71 /* SFVideoCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFVideoCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18EF3631200F11A300D4AF71 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18EF3632200F11A300D4AF71 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18EF3634200F11A300D4AF71 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18EF3635200F11A300D4AF71 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18EF3638200F11A300D4AF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18EF363A200F11A300D4AF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18EF363D200F11A300D4AF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18EF363F200F11A300D4AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EF3640200F11A300D4AF71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18EF3646200F11A300D4AF71 /* SFVideoCaptureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFVideoCaptureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18EF364A200F11A300D4AF71 /* SFVideoCaptureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFVideoCaptureTests.m; sourceTree = "<group>"; };
+		18EF364C200F11A300D4AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EF3651200F11A300D4AF71 /* SFVideoCaptureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFVideoCaptureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18EF3655200F11A300D4AF71 /* SFVideoCaptureUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFVideoCaptureUITests.m; sourceTree = "<group>"; };
+		18EF3657200F11A300D4AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EF366A200F13CE00D4AF71 /* SFVideoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFVideoManager.h; sourceTree = "<group>"; };
+		18EF366B200F13CE00D4AF71 /* SFVideoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFVideoManager.m; sourceTree = "<group>"; };
+		18EF366E200F172D00D4AF71 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		18EF366F200F172D00D4AF71 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		18EF3670200F172D00D4AF71 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		18EF3671200F172D00D4AF71 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		18EF3672200F172D00D4AF71 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		18EF3673200F172D00D4AF71 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		18EF3674200F172D00D4AF71 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		18EF3675200F172D00D4AF71 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		18EF3676200F172D00D4AF71 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		18EF3677200F172D00D4AF71 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		18EF3678200F172D00D4AF71 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		18EF3679200F172D00D4AF71 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		18EF367A200F172D00D4AF71 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		18EF367B200F172D00D4AF71 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		18EF367C200F172D00D4AF71 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		18EF367D200F172D00D4AF71 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		18EF367E200F172D00D4AF71 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		18EF367F200F172D00D4AF71 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		18EF3680200F172D00D4AF71 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		18EF3681200F172D00D4AF71 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		18EF3682200F172D00D4AF71 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		18EF3683200F172D00D4AF71 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		18EF3684200F172D00D4AF71 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		18EF3685200F172D00D4AF71 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		18EF3686200F172D00D4AF71 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		18EF3688200F172D00D4AF71 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		18EF3689200F172D00D4AF71 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		18EF3696200F176100D4AF71 /* SFGetTopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGetTopVC.h; sourceTree = "<group>"; };
+		18EF3697200F176100D4AF71 /* SFGetTopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGetTopVC.m; sourceTree = "<group>"; };
+		18EF3699200F178300D4AF71 /* SFPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFPrefixHeader.pch; sourceTree = "<group>"; };
+		18EF369B200F181500D4AF71 /* SFVideoHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFVideoHeader.h; sourceTree = "<group>"; };
+		18EF369C200F182A00D4AF71 /* SFGlobalheader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFGlobalheader.h; sourceTree = "<group>"; };
+		18EF369D200F194300D4AF71 /* UIView+SFView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SFView.h"; sourceTree = "<group>"; };
+		18EF369E200F194300D4AF71 /* UIView+SFView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SFView.m"; sourceTree = "<group>"; };
+		18EF36A1200F1A7100D4AF71 /* LGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertView.h; sourceTree = "<group>"; };
+		18EF36A2200F1A7100D4AF71 /* LGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertView.m; sourceTree = "<group>"; };
+		18EF36A3200F1A7100D4AF71 /* LGAlertViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewButton.h; sourceTree = "<group>"; };
+		18EF36A4200F1A7100D4AF71 /* LGAlertViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewButton.m; sourceTree = "<group>"; };
+		18EF36A5200F1A7100D4AF71 /* LGAlertViewButtonProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewButtonProperties.h; sourceTree = "<group>"; };
+		18EF36A6200F1A7100D4AF71 /* LGAlertViewButtonProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewButtonProperties.m; sourceTree = "<group>"; };
+		18EF36A7200F1A7100D4AF71 /* LGAlertViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewCell.h; sourceTree = "<group>"; };
+		18EF36A8200F1A7100D4AF71 /* LGAlertViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewCell.m; sourceTree = "<group>"; };
+		18EF36A9200F1A7100D4AF71 /* LGAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewController.h; sourceTree = "<group>"; };
+		18EF36AA200F1A7100D4AF71 /* LGAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewController.m; sourceTree = "<group>"; };
+		18EF36AB200F1A7100D4AF71 /* LGAlertViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewHelper.h; sourceTree = "<group>"; };
+		18EF36AC200F1A7100D4AF71 /* LGAlertViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewHelper.m; sourceTree = "<group>"; };
+		18EF36AD200F1A7100D4AF71 /* LGAlertViewShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewShadowView.h; sourceTree = "<group>"; };
+		18EF36AE200F1A7100D4AF71 /* LGAlertViewShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewShadowView.m; sourceTree = "<group>"; };
+		18EF36AF200F1A7100D4AF71 /* LGAlertViewShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewShared.h; sourceTree = "<group>"; };
+		18EF36B0200F1A7100D4AF71 /* LGAlertViewTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewTextField.h; sourceTree = "<group>"; };
+		18EF36B1200F1A7100D4AF71 /* LGAlertViewTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewTextField.m; sourceTree = "<group>"; };
+		18EF36B2200F1A7100D4AF71 /* LGAlertViewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewWindow.h; sourceTree = "<group>"; };
+		18EF36B3200F1A7100D4AF71 /* LGAlertViewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewWindow.m; sourceTree = "<group>"; };
+		18EF36B4200F1A7100D4AF71 /* LGAlertViewWindowContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewWindowContainer.h; sourceTree = "<group>"; };
+		18EF36B5200F1A7100D4AF71 /* LGAlertViewWindowContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewWindowContainer.m; sourceTree = "<group>"; };
+		18EF36B6200F1A7100D4AF71 /* LGAlertViewWindowsObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewWindowsObserver.h; sourceTree = "<group>"; };
+		18EF36B7200F1A7100D4AF71 /* LGAlertViewWindowsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewWindowsObserver.m; sourceTree = "<group>"; };
+		18EF36B8200F1A7100D4AF71 /* UIWindow+LGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+LGAlertView.h"; sourceTree = "<group>"; };
+		18EF36B9200F1A7100D4AF71 /* UIWindow+LGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LGAlertView.m"; sourceTree = "<group>"; };
+		18EF36C6200F1F8400D4AF71 /* SFAlterTagHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAlterTagHeader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18EF362B200F11A300D4AF71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18EF3643200F11A300D4AF71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18EF364E200F11A300D4AF71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18EF3625200F11A300D4AF71 = {
+			isa = PBXGroup;
+			children = (
+				18EF3630200F11A300D4AF71 /* SFVideoCapture */,
+				18EF3649200F11A300D4AF71 /* SFVideoCaptureTests */,
+				18EF3654200F11A300D4AF71 /* SFVideoCaptureUITests */,
+				18EF362F200F11A300D4AF71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18EF362F200F11A300D4AF71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18EF362E200F11A300D4AF71 /* SFVideoCapture.app */,
+				18EF3646200F11A300D4AF71 /* SFVideoCaptureTests.xctest */,
+				18EF3651200F11A300D4AF71 /* SFVideoCaptureUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18EF3630200F11A300D4AF71 /* SFVideoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				18EF3663200F13AA00D4AF71 /* SFVideo */,
+				18EF3631200F11A300D4AF71 /* AppDelegate.h */,
+				18EF3632200F11A300D4AF71 /* AppDelegate.m */,
+				18EF3634200F11A300D4AF71 /* ViewController.h */,
+				18EF3635200F11A300D4AF71 /* ViewController.m */,
+				18EF3699200F178300D4AF71 /* SFPrefixHeader.pch */,
+				18EF369B200F181500D4AF71 /* SFVideoHeader.h */,
+				18EF369C200F182A00D4AF71 /* SFGlobalheader.h */,
+				18EF3637200F11A300D4AF71 /* Main.storyboard */,
+				18EF363A200F11A300D4AF71 /* Assets.xcassets */,
+				18EF363C200F11A300D4AF71 /* LaunchScreen.storyboard */,
+				18EF363F200F11A300D4AF71 /* Info.plist */,
+				18EF3640200F11A300D4AF71 /* main.m */,
+			);
+			path = SFVideoCapture;
+			sourceTree = "<group>";
+		};
+		18EF3649200F11A300D4AF71 /* SFVideoCaptureTests */ = {
+			isa = PBXGroup;
+			children = (
+				18EF364A200F11A300D4AF71 /* SFVideoCaptureTests.m */,
+				18EF364C200F11A300D4AF71 /* Info.plist */,
+			);
+			path = SFVideoCaptureTests;
+			sourceTree = "<group>";
+		};
+		18EF3654200F11A300D4AF71 /* SFVideoCaptureUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18EF3655200F11A300D4AF71 /* SFVideoCaptureUITests.m */,
+				18EF3657200F11A300D4AF71 /* Info.plist */,
+			);
+			path = SFVideoCaptureUITests;
+			sourceTree = "<group>";
+		};
+		18EF3663200F13AA00D4AF71 /* SFVideo */ = {
+			isa = PBXGroup;
+			children = (
+				18EF3664200F13AA00D4AF71 /* SFMain */,
+				18EF3668200F13AA00D4AF71 /* SFTool */,
+				18EF3669200F13AA00D4AF71 /* ThirdHelper */,
+			);
+			path = SFVideo;
+			sourceTree = "<group>";
+		};
+		18EF3664200F13AA00D4AF71 /* SFMain */ = {
+			isa = PBXGroup;
+			children = (
+				18EF3665200F13AA00D4AF71 /* Controller */,
+				18EF3666200F13AA00D4AF71 /* Model */,
+				18EF3667200F13AA00D4AF71 /* View */,
+			);
+			path = SFMain;
+			sourceTree = "<group>";
+		};
+		18EF3665200F13AA00D4AF71 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18EF3666200F13AA00D4AF71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18EF3667200F13AA00D4AF71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18EF3668200F13AA00D4AF71 /* SFTool */ = {
+			isa = PBXGroup;
+			children = (
+				18EF366A200F13CE00D4AF71 /* SFVideoManager.h */,
+				18EF366B200F13CE00D4AF71 /* SFVideoManager.m */,
+				18EF36C6200F1F8400D4AF71 /* SFAlterTagHeader.h */,
+			);
+			path = SFTool;
+			sourceTree = "<group>";
+		};
+		18EF3669200F13AA00D4AF71 /* ThirdHelper */ = {
+			isa = PBXGroup;
+			children = (
+				18EF36A0200F1A7100D4AF71 /* LGAlertView */,
+				18EF3695200F176100D4AF71 /* SFHelper */,
+				18EF366D200F172D00D4AF71 /* Masonry */,
+				18EF3687200F172D00D4AF71 /* MBProgressHUD */,
+			);
+			path = ThirdHelper;
+			sourceTree = "<group>";
+		};
+		18EF366D200F172D00D4AF71 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				18EF366E200F172D00D4AF71 /* MASCompositeConstraint.h */,
+				18EF366F200F172D00D4AF71 /* MASCompositeConstraint.m */,
+				18EF3670200F172D00D4AF71 /* MASConstraint+Private.h */,
+				18EF3671200F172D00D4AF71 /* MASConstraint.h */,
+				18EF3672200F172D00D4AF71 /* MASConstraint.m */,
+				18EF3673200F172D00D4AF71 /* MASConstraintMaker.h */,
+				18EF3674200F172D00D4AF71 /* MASConstraintMaker.m */,
+				18EF3675200F172D00D4AF71 /* MASLayoutConstraint.h */,
+				18EF3676200F172D00D4AF71 /* MASLayoutConstraint.m */,
+				18EF3677200F172D00D4AF71 /* Masonry.h */,
+				18EF3678200F172D00D4AF71 /* MASUtilities.h */,
+				18EF3679200F172D00D4AF71 /* MASViewAttribute.h */,
+				18EF367A200F172D00D4AF71 /* MASViewAttribute.m */,
+				18EF367B200F172D00D4AF71 /* MASViewConstraint.h */,
+				18EF367C200F172D00D4AF71 /* MASViewConstraint.m */,
+				18EF367D200F172D00D4AF71 /* NSArray+MASAdditions.h */,
+				18EF367E200F172D00D4AF71 /* NSArray+MASAdditions.m */,
+				18EF367F200F172D00D4AF71 /* NSArray+MASShorthandAdditions.h */,
+				18EF3680200F172D00D4AF71 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				18EF3681200F172D00D4AF71 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				18EF3682200F172D00D4AF71 /* View+MASAdditions.h */,
+				18EF3683200F172D00D4AF71 /* View+MASAdditions.m */,
+				18EF3684200F172D00D4AF71 /* View+MASShorthandAdditions.h */,
+				18EF3685200F172D00D4AF71 /* ViewController+MASAdditions.h */,
+				18EF3686200F172D00D4AF71 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		18EF3687200F172D00D4AF71 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				18EF3688200F172D00D4AF71 /* MBProgressHUD.h */,
+				18EF3689200F172D00D4AF71 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		18EF3695200F176100D4AF71 /* SFHelper */ = {
+			isa = PBXGroup;
+			children = (
+				18EF3696200F176100D4AF71 /* SFGetTopVC.h */,
+				18EF3697200F176100D4AF71 /* SFGetTopVC.m */,
+				18EF369D200F194300D4AF71 /* UIView+SFView.h */,
+				18EF369E200F194300D4AF71 /* UIView+SFView.m */,
+			);
+			path = SFHelper;
+			sourceTree = "<group>";
+		};
+		18EF36A0200F1A7100D4AF71 /* LGAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				18EF36A1200F1A7100D4AF71 /* LGAlertView.h */,
+				18EF36A2200F1A7100D4AF71 /* LGAlertView.m */,
+				18EF36A3200F1A7100D4AF71 /* LGAlertViewButton.h */,
+				18EF36A4200F1A7100D4AF71 /* LGAlertViewButton.m */,
+				18EF36A5200F1A7100D4AF71 /* LGAlertViewButtonProperties.h */,
+				18EF36A6200F1A7100D4AF71 /* LGAlertViewButtonProperties.m */,
+				18EF36A7200F1A7100D4AF71 /* LGAlertViewCell.h */,
+				18EF36A8200F1A7100D4AF71 /* LGAlertViewCell.m */,
+				18EF36A9200F1A7100D4AF71 /* LGAlertViewController.h */,
+				18EF36AA200F1A7100D4AF71 /* LGAlertViewController.m */,
+				18EF36AB200F1A7100D4AF71 /* LGAlertViewHelper.h */,
+				18EF36AC200F1A7100D4AF71 /* LGAlertViewHelper.m */,
+				18EF36AD200F1A7100D4AF71 /* LGAlertViewShadowView.h */,
+				18EF36AE200F1A7100D4AF71 /* LGAlertViewShadowView.m */,
+				18EF36AF200F1A7100D4AF71 /* LGAlertViewShared.h */,
+				18EF36B0200F1A7100D4AF71 /* LGAlertViewTextField.h */,
+				18EF36B1200F1A7100D4AF71 /* LGAlertViewTextField.m */,
+				18EF36B2200F1A7100D4AF71 /* LGAlertViewWindow.h */,
+				18EF36B3200F1A7100D4AF71 /* LGAlertViewWindow.m */,
+				18EF36B4200F1A7100D4AF71 /* LGAlertViewWindowContainer.h */,
+				18EF36B5200F1A7100D4AF71 /* LGAlertViewWindowContainer.m */,
+				18EF36B6200F1A7100D4AF71 /* LGAlertViewWindowsObserver.h */,
+				18EF36B7200F1A7100D4AF71 /* LGAlertViewWindowsObserver.m */,
+				18EF36B8200F1A7100D4AF71 /* UIWindow+LGAlertView.h */,
+				18EF36B9200F1A7100D4AF71 /* UIWindow+LGAlertView.m */,
+			);
+			path = LGAlertView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18EF362D200F11A300D4AF71 /* SFVideoCapture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18EF365A200F11A300D4AF71 /* Build configuration list for PBXNativeTarget "SFVideoCapture" */;
+			buildPhases = (
+				18EF362A200F11A300D4AF71 /* Sources */,
+				18EF362B200F11A300D4AF71 /* Frameworks */,
+				18EF362C200F11A300D4AF71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFVideoCapture;
+			productName = SFVideoCapture;
+			productReference = 18EF362E200F11A300D4AF71 /* SFVideoCapture.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18EF3645200F11A300D4AF71 /* SFVideoCaptureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18EF365D200F11A300D4AF71 /* Build configuration list for PBXNativeTarget "SFVideoCaptureTests" */;
+			buildPhases = (
+				18EF3642200F11A300D4AF71 /* Sources */,
+				18EF3643200F11A300D4AF71 /* Frameworks */,
+				18EF3644200F11A300D4AF71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18EF3648200F11A300D4AF71 /* PBXTargetDependency */,
+			);
+			name = SFVideoCaptureTests;
+			productName = SFVideoCaptureTests;
+			productReference = 18EF3646200F11A300D4AF71 /* SFVideoCaptureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18EF3650200F11A300D4AF71 /* SFVideoCaptureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18EF3660200F11A300D4AF71 /* Build configuration list for PBXNativeTarget "SFVideoCaptureUITests" */;
+			buildPhases = (
+				18EF364D200F11A300D4AF71 /* Sources */,
+				18EF364E200F11A300D4AF71 /* Frameworks */,
+				18EF364F200F11A300D4AF71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18EF3653200F11A300D4AF71 /* PBXTargetDependency */,
+			);
+			name = SFVideoCaptureUITests;
+			productName = SFVideoCaptureUITests;
+			productReference = 18EF3651200F11A300D4AF71 /* SFVideoCaptureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18EF3626200F11A300D4AF71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = com.easyhospital;
+				TargetAttributes = {
+					18EF362D200F11A300D4AF71 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					18EF3645200F11A300D4AF71 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18EF362D200F11A300D4AF71;
+					};
+					18EF3650200F11A300D4AF71 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18EF362D200F11A300D4AF71;
+					};
+				};
+			};
+			buildConfigurationList = 18EF3629200F11A300D4AF71 /* Build configuration list for PBXProject "SFVideoCapture" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18EF3625200F11A300D4AF71;
+			productRefGroup = 18EF362F200F11A300D4AF71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18EF362D200F11A300D4AF71 /* SFVideoCapture */,
+				18EF3645200F11A300D4AF71 /* SFVideoCaptureTests */,
+				18EF3650200F11A300D4AF71 /* SFVideoCaptureUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18EF362C200F11A300D4AF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EF363E200F11A300D4AF71 /* LaunchScreen.storyboard in Resources */,
+				18EF363B200F11A300D4AF71 /* Assets.xcassets in Resources */,
+				18EF3639200F11A300D4AF71 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18EF3644200F11A300D4AF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18EF364F200F11A300D4AF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18EF362A200F11A300D4AF71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EF368C200F172D00D4AF71 /* MASConstraintMaker.m in Sources */,
+				18EF36BB200F1A7100D4AF71 /* LGAlertViewButton.m in Sources */,
+				18EF3636200F11A300D4AF71 /* ViewController.m in Sources */,
+				18EF3641200F11A300D4AF71 /* main.m in Sources */,
+				18EF368B200F172D00D4AF71 /* MASConstraint.m in Sources */,
+				18EF36C5200F1A7100D4AF71 /* UIWindow+LGAlertView.m in Sources */,
+				18EF3693200F172D00D4AF71 /* ViewController+MASAdditions.m in Sources */,
+				18EF368D200F172D00D4AF71 /* MASLayoutConstraint.m in Sources */,
+				18EF3690200F172D00D4AF71 /* NSArray+MASAdditions.m in Sources */,
+				18EF3694200F172D00D4AF71 /* MBProgressHUD.m in Sources */,
+				18EF36C0200F1A7100D4AF71 /* LGAlertViewShadowView.m in Sources */,
+				18EF368F200F172D00D4AF71 /* MASViewConstraint.m in Sources */,
+				18EF368E200F172D00D4AF71 /* MASViewAttribute.m in Sources */,
+				18EF36C4200F1A7100D4AF71 /* LGAlertViewWindowsObserver.m in Sources */,
+				18EF36BC200F1A7100D4AF71 /* LGAlertViewButtonProperties.m in Sources */,
+				18EF369F200F194300D4AF71 /* UIView+SFView.m in Sources */,
+				18EF36C2200F1A7100D4AF71 /* LGAlertViewWindow.m in Sources */,
+				18EF3692200F172D00D4AF71 /* View+MASAdditions.m in Sources */,
+				18EF366C200F13CE00D4AF71 /* SFVideoManager.m in Sources */,
+				18EF3698200F176100D4AF71 /* SFGetTopVC.m in Sources */,
+				18EF36C1200F1A7100D4AF71 /* LGAlertViewTextField.m in Sources */,
+				18EF36BE200F1A7100D4AF71 /* LGAlertViewController.m in Sources */,
+				18EF3633200F11A300D4AF71 /* AppDelegate.m in Sources */,
+				18EF36BD200F1A7100D4AF71 /* LGAlertViewCell.m in Sources */,
+				18EF368A200F172D00D4AF71 /* MASCompositeConstraint.m in Sources */,
+				18EF36BA200F1A7100D4AF71 /* LGAlertView.m in Sources */,
+				18EF36C3200F1A7100D4AF71 /* LGAlertViewWindowContainer.m in Sources */,
+				18EF3691200F172D00D4AF71 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				18EF36BF200F1A7100D4AF71 /* LGAlertViewHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18EF3642200F11A300D4AF71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EF364B200F11A300D4AF71 /* SFVideoCaptureTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18EF364D200F11A300D4AF71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EF3656200F11A300D4AF71 /* SFVideoCaptureUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18EF3648200F11A300D4AF71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18EF362D200F11A300D4AF71 /* SFVideoCapture */;
+			targetProxy = 18EF3647200F11A300D4AF71 /* PBXContainerItemProxy */;
+		};
+		18EF3653200F11A300D4AF71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18EF362D200F11A300D4AF71 /* SFVideoCapture */;
+			targetProxy = 18EF3652200F11A300D4AF71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18EF3637200F11A300D4AF71 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18EF3638200F11A300D4AF71 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18EF363C200F11A300D4AF71 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18EF363D200F11A300D4AF71 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18EF3658200F11A300D4AF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18EF3659200F11A300D4AF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18EF365B200F11A300D4AF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SFVideoCapture/SFPrefixHeader.pch";
+				INFOPLIST_FILE = SFVideoCapture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyhospital.SFVideoCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18EF365C200F11A300D4AF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SFVideoCapture/SFPrefixHeader.pch";
+				INFOPLIST_FILE = SFVideoCapture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyhospital.SFVideoCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18EF365E200F11A300D4AF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SFVideoCaptureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyhospital.SFVideoCaptureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFVideoCapture.app/SFVideoCapture";
+			};
+			name = Debug;
+		};
+		18EF365F200F11A300D4AF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SFVideoCaptureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyhospital.SFVideoCaptureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFVideoCapture.app/SFVideoCapture";
+			};
+			name = Release;
+		};
+		18EF3661200F11A300D4AF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SFVideoCaptureUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyhospital.SFVideoCaptureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SFVideoCapture;
+			};
+			name = Debug;
+		};
+		18EF3662200F11A300D4AF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SFVideoCaptureUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyhospital.SFVideoCaptureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SFVideoCapture;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18EF3629200F11A300D4AF71 /* Build configuration list for PBXProject "SFVideoCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18EF3658200F11A300D4AF71 /* Debug */,
+				18EF3659200F11A300D4AF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18EF365A200F11A300D4AF71 /* Build configuration list for PBXNativeTarget "SFVideoCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18EF365B200F11A300D4AF71 /* Debug */,
+				18EF365C200F11A300D4AF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18EF365D200F11A300D4AF71 /* Build configuration list for PBXNativeTarget "SFVideoCaptureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18EF365E200F11A300D4AF71 /* Debug */,
+				18EF365F200F11A300D4AF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18EF3660200F11A300D4AF71 /* Build configuration list for PBXNativeTarget "SFVideoCaptureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18EF3661200F11A300D4AF71 /* Debug */,
+				18EF3662200F11A300D4AF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18EF3626200F11A300D4AF71 /* Project object */;
+}
