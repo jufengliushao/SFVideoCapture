@@ -33,10 +33,10 @@ static SFVideoManager *videoManager = nil;
 #pragma mark - 权限检查
 #pragma mark - 录制视频所需权限
 - (void)sf_getAllVideoRight{
-    AVAuthorizationStatus cameraStatus = [self sf_private_askCameraRightStuts];
-    [self sf_private_CamerRight:cameraStatus type:(AVMediaTypeVideo)];
     AVAuthorizationStatus audioStatus = [self sf_private_askAudioRightStuts];
     [self sf_private_CamerRight:audioStatus type:(AVMediaTypeAudio)];
+    AVAuthorizationStatus cameraStatus = [self sf_private_askCameraRightStuts];
+    [self sf_private_CamerRight:cameraStatus type:(AVMediaTypeVideo)];
 }
 
 #pragma mark - 私有方法
