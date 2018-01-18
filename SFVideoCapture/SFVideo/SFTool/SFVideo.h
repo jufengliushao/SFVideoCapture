@@ -41,4 +41,10 @@ typedef NS_ENUM(NSInteger, SFVideoPresent) {
  * return NO 没有闪光灯
  */
 - (BOOL)sf_cameraTouch:(BOOL)isOpen;
+
+/**
+ * 手动对焦
+ * point x y 范围为0~1
+ */
+- (void)sf_cameraFocus:(CGPoint)point;
 @end

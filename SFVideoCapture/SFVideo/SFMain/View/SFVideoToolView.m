@@ -12,7 +12,9 @@
 #import "UIButton+SFButton.h"
 #import "LGAlertView.h"
 
-@interface SFVideoToolView()<LGAlertViewDelegate>
+@interface SFVideoToolView()<LGAlertViewDelegate, UIGestureRecognizerDelegate>
+
+
 @end
 
 @implementation SFVideoToolView
@@ -77,6 +79,16 @@
     LGAlertView *av = [[LGAlertView alloc] initWithTitle:@"提示" message:@"你的设备不支持闪光灯" style:(LGAlertViewStyleAlert) buttonTitles:nil cancelButtonTitle:@"知道了" destructiveButtonTitle:nil delegate:self];
     av.tag = SF_ALTER_TAG_FLASH_NOHAVE;
     [av showAnimated:YES completionHandler:nil];
+}
+
+#pragma mark - 获取点击坐标
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSSet *set = [event allTouches];
+    UITouch *touch = [set anyObject];
+    CGPoint point = [touch locationInView:self];
+    CGPoint po = CGPointMake(point.x / self.width, point.y / self.height);
+    NSLog(@"%.2f-%.2f", po.x, po.y);
+    [[SFVideo videoFuncManager] sf_cameraFocus:po];
 }
 
 #pragma mark - LGAlertViewDelegate

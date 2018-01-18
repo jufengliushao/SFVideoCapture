@@ -102,6 +102,10 @@ static NSString *fileDecName = @"baoxiuDec.mp4";
 - (BOOL)sf_cameraTouch:(BOOL)isOpen{
     return [self sf_private_cameraFlash:isOpen];
 }
+
+- (void)sf_cameraFocus:(CGPoint)point{
+    [self sf_private_cameraFocus:point];
+}
 #pragma mark - AVCaptureFileOutputRecordingDelegate
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error{
     NSLog(@"");
@@ -249,6 +253,17 @@ static NSString *fileDecName = @"baoxiuDec.mp4";
         return YES;
     }
     return NO;
+}
+
+- (void)sf_private_cameraFocus:(CGPoint)point{
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if (device.isFocusPointOfInterestSupported && [device isFocusModeSupported:(AVCaptureFocusModeAutoFocus)]) {
+        NSError *er = nil;
+        [device lockForConfiguration:&er];
+        [device setFocusMode:(AVCaptureFocusModeAutoFocus)];
+        [device setFocusPointOfInterest:point];
+        [device unlockForConfiguration];
+    }
 }
 #pragma mark - setter getter
 - (void)setPresent:(SFVideoPresent)present{
