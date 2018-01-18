@@ -12,8 +12,11 @@
 #import "UIButton+SFButton.h"
 #import "LGAlertView.h"
 
-@interface SFVideoToolView()<LGAlertViewDelegate, UIGestureRecognizerDelegate>
+@interface SFVideoToolView()<LGAlertViewDelegate, UIGestureRecognizerDelegate>{
+    NSInteger curSecond; // 当前秒数
+}
 
+@property (nonatomic, strong) NSTimer *secTimer; // 定时器
 
 @end
 
@@ -21,6 +24,7 @@
 - (instancetype)init{
     if (self  = [super init]) {
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.0];
+        curSecond = 0;
         [self buttonAction];
     }
     return self;
@@ -43,6 +47,11 @@
         make.trailing.mas_equalTo(-45);
         make.height.mas_equalTo(30);
     }];
+    [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.mas_equalTo(-30);
+        make.height.mas_equalTo(30);
+        make.bottom.mas_equalTo(-45);
+    }];
     [super drawRect:rect];
 }
 
@@ -55,8 +64,10 @@
         sender.selected = !sender.isSelected;
         if (sender.isSelected) {
             [[SFVideo videoFuncManager] sf_startVideo];
+            [ws createTimer];
         }else{
             [[SFVideo videoFuncManager] sf_stopVideo];
+            [self stopTimer];
         }
     }];
     
@@ -89,6 +100,23 @@
     CGPoint po = CGPointMake(point.x / self.width, point.y / self.height);
     NSLog(@"%.2f-%.2f", po.x, po.y);
     [[SFVideo videoFuncManager] sf_cameraFocus:po];
+}
+
+#pragma mark - 创建定时器
+- (void)createTimer{
+    self.secTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
+}
+
+- (void)stopTimer{
+    curSecond = 0;
+    [self.secTimer invalidate];
+    self.secTimer = nil;
+}
+
+- (void)timerAction:(NSTimer *)sender{
+    curSecond += 1;
+    self.timeLabel.text = [NSString stringWithFormat:@"0:%02ld/0:30", curSecond];
+    NSLog(@"运行了");
 }
 
 #pragma mark - LGAlertViewDelegate
@@ -130,5 +158,16 @@
         [self addSubview:_flashBtn];
     }
     return _flashBtn;
+}
+
+- (UILabel *)timeLabel{
+    if (!_timeLabel) {
+        _timeLabel = [[UILabel alloc] init];
+        _timeLabel.text = @"0:00/0:30";
+        _timeLabel.font = [UIFont systemFontOfSize:13];
+        _timeLabel.textColor = [UIColor whiteColor];
+        [self addSubview:_timeLabel];
+    }
+    return _timeLabel;
 }
 @end
