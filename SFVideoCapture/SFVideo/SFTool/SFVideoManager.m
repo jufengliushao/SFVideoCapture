@@ -115,7 +115,14 @@ static SFVideoManager *videoManager = nil;
     NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
     if([[UIApplication sharedApplication] canOpenURL:url]) {
         NSURL*url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];
-        [[UIApplication sharedApplication] openURL:url];
+        if ([UIDevice currentDevice].systemVersion.doubleValue > 10.0) {
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+                
+            }];
+        }else{
+            [[UIApplication sharedApplication] openURL:url];
+        }
+        
     }
 }
 
