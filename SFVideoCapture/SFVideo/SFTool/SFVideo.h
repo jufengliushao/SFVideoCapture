@@ -32,4 +32,13 @@ typedef NS_ENUM(NSInteger, SFVideoPresent) {
  * NO 后置
  */
 - (void)sf_changeCamera:(BOOL)isFront;
+
+/**
+ *  打开摄像头
+ * YES -on
+ * NO -off
+ * return YES 可以开关
+ * return NO 没有闪光灯
+ */
+- (BOOL)sf_cameraTouch:(BOOL)isOpen;
 @end

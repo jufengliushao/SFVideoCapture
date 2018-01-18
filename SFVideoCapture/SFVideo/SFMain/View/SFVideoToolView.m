@@ -10,6 +10,11 @@
 #import "Masonry.h"
 #import "SFVideo.h"
 #import "UIButton+SFButton.h"
+#import "LGAlertView.h"
+
+@interface SFVideoToolView()<LGAlertViewDelegate>
+@end
+
 @implementation SFVideoToolView
 - (instancetype)init{
     if (self  = [super init]) {
@@ -29,6 +34,11 @@
     [self.cameraFront mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.top.mas_equalTo(45);
         make.width.mas_equalTo(68);
+        make.height.mas_equalTo(30);
+    }];
+    [self.flashBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(45);
+        make.trailing.mas_equalTo(-45);
         make.height.mas_equalTo(30);
     }];
     [super drawRect:rect];
@@ -53,7 +63,27 @@
         sender.selected = !sender.isSelected;
         [[SFVideo videoFuncManager] sf_changeCamera:sender.isSelected];
     }];
+    
+    // 闪光灯打开
+    [self.flashBtn addTargetAction:^(UIButton *sender) {
+        sender.selected = !sender.isSelected;
+        if (![[SFVideo videoFuncManager] sf_cameraTouch:sender.isSelected]) {
+            [ws alert];
+        }
+    }];
 }
+
+- (void)alert{
+    LGAlertView *av = [[LGAlertView alloc] initWithTitle:@"提示" message:@"你的设备不支持闪光灯" style:(LGAlertViewStyleAlert) buttonTitles:nil cancelButtonTitle:@"知道了" destructiveButtonTitle:nil delegate:self];
+    av.tag = SF_ALTER_TAG_FLASH_NOHAVE;
+    [av showAnimated:YES completionHandler:nil];
+}
+
+#pragma mark - LGAlertViewDelegate
+- (void)alertViewCancelled:(LGAlertView *)alertView {
+    
+}
+
 
 #pragma mark - 懒加载
 - (UIButton *)recordBtn{
@@ -76,5 +106,17 @@
         [self addSubview:_cameraFront];
     }
     return _cameraFront;
+}
+
+- (UIButton *)flashBtn{
+    if(!_flashBtn){
+        _flashBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        [_flashBtn setTitle:@"闪光灯打开" forState:(UIControlStateNormal)];
+        [_flashBtn setTitle:@"闪光灯关闭" forState:(UIControlStateSelected)];
+        _flashBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+        _flashBtn.selected = NO;
+        [self addSubview:_flashBtn];
+    }
+    return _flashBtn;
 }
 @end

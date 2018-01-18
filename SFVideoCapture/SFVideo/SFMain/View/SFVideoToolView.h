@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) UIButton *recordBtn; // 录制与停止按钮
 @property (nonatomic, strong) UIButton *cameraFront; // 摄像头切换
+@property (nonatomic, strong) UIButton *flashBtn; // 闪光灯按钮
 
 @end

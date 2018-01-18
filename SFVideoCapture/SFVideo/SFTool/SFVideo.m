@@ -99,6 +99,9 @@ static NSString *fileDecName = @"baoxiuDec.mp4";
     [self.captureSession commitConfiguration];
 }
 
+- (BOOL)sf_cameraTouch:(BOOL)isOpen{
+    return [self sf_private_cameraFlash:isOpen];
+}
 #pragma mark - AVCaptureFileOutputRecordingDelegate
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error{
     NSLog(@"");
@@ -227,6 +230,25 @@ static NSString *fileDecName = @"baoxiuDec.mp4";
     [session exportAsynchronouslyWithCompletionHandler:^{
         
     }];
+}
+
+- (BOOL)sf_private_cameraFlash:(BOOL)isOpen{
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if ([device hasTorch]) {
+        if (isOpen) {
+            NSError *er = nil;
+            if ([device lockForConfiguration:&er]) {
+                device.torchMode = AVCaptureTorchModeOn;
+                [device unlockForConfiguration];
+            }
+        }else{
+            [device lockForConfiguration:nil];
+            device.torchMode = AVCaptureTorchModeOff;
+            [device unlockForConfiguration];
+        }
+        return YES;
+    }
+    return NO;
 }
 #pragma mark - setter getter
 - (void)setPresent:(SFVideoPresent)present{
