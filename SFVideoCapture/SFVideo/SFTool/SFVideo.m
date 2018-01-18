@@ -85,6 +85,20 @@ static NSString *fileDecName = @"baoxiuDec.mp4";
     return preView;
 }
 
+- (void)sf_changeCamera:(BOOL)isFront{
+    AVCaptureDevicePosition status = isFront ? AVCaptureDevicePositionFront : AVCaptureDevicePositionBack;
+    AVCaptureDevice *newc = [self sf_private_getCamera:status];
+    NSError *er = nil;
+    AVCaptureDeviceInput *nIp = [[AVCaptureDeviceInput alloc] initWithDevice:newc error:&er];
+    [self.captureSession beginConfiguration];
+    [self.captureSession removeInput:self.videoInput];
+    if ([self.captureSession canAddInput:nIp]) {
+        [self.captureSession addInput:nIp];
+        self.videoInput = nIp;
+    }
+    [self.captureSession commitConfiguration];
+}
+
 #pragma mark - AVCaptureFileOutputRecordingDelegate
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error{
     NSLog(@"");

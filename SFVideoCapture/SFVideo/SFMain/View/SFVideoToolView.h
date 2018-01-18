@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SFVideoToolView : UIView
+
 @property (nonatomic, strong) UIButton *recordBtn; // 录制与停止按钮
+@property (nonatomic, strong) UIButton *cameraFront; // 摄像头切换
+
 @end

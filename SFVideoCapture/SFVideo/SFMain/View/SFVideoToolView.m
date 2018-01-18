@@ -8,10 +8,13 @@
 
 #import "SFVideoToolView.h"
 #import "Masonry.h"
+#import "SFVideo.h"
+#import "UIButton+SFButton.h"
 @implementation SFVideoToolView
 - (instancetype)init{
     if (self  = [super init]) {
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.0];
+        [self buttonAction];
     }
     return self;
 }
@@ -23,8 +26,33 @@
         make.bottom.mas_equalTo(-50);
         make.width.height.mas_equalTo(50);
     }];
-//    self.recordBtn.frame = CGRectMake(100, 100, 50, 50);
+    [self.cameraFront mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.top.mas_equalTo(45);
+        make.width.mas_equalTo(68);
+        make.height.mas_equalTo(30);
+    }];
     [super drawRect:rect];
+}
+
+#pragma mark - 点击事件
+- (void)buttonAction{
+    WS(ws);
+    // 开始按钮
+    [self.recordBtn addTargetAction:^(UIButton *sender) {
+        NSLog(@"开始录制");
+        sender.selected = !sender.isSelected;
+        if (sender.isSelected) {
+            [[SFVideo videoFuncManager] sf_startVideo];
+        }else{
+            [[SFVideo videoFuncManager] sf_stopVideo];
+        }
+    }];
+    
+    // 摄像头切换事件
+    [self.cameraFront addTargetAction:^(UIButton *sender) {
+        sender.selected = !sender.isSelected;
+        [[SFVideo videoFuncManager] sf_changeCamera:sender.isSelected];
+    }];
 }
 
 #pragma mark - 懒加载
@@ -39,4 +67,14 @@
     return _recordBtn;
 }
 
+- (UIButton *)cameraFront{
+    if (!_cameraFront) {
+        _cameraFront = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        [_cameraFront setTitle:@"切换摄像头" forState:(UIControlStateNormal)];
+        _cameraFront.titleLabel.font = [UIFont systemFontOfSize:13];
+        _cameraFront.selected = NO;
+        [self addSubview:_cameraFront];
+    }
+    return _cameraFront;
+}
 @end

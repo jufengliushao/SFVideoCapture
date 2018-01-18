@@ -25,4 +25,11 @@ typedef NS_ENUM(NSInteger, SFVideoPresent) {
 - (void)sf_stopVideo;
 // 获取展示页面
 - (SFVideoLayerView *)sf_getVideoLayer;
+
+/**
+ * 切换摄像头
+ * YES 前置
+ * NO 后置
+ */
+- (void)sf_changeCamera:(BOOL)isFront;
 @end

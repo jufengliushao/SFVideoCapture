@@ -27,11 +27,6 @@
     self.view = layerView;
     
     [layerView bringSubviewToFront:layerView.toolView];
-    WS(ws);
-    [layerView.toolView.recordBtn addTargetAction:^(UIButton *sender) {
-        NSLog(@"开始录制");
-        [ws recordingAction];
-    }];
     // Do any additional setup after loading the view from its nib.
 }
 
